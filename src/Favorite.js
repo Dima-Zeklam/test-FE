@@ -1,8 +1,11 @@
 import axios from 'axios';
 import React from 'react';
 import { withAuth0 } from "@auth0/auth0-react";
+require('dotenv').config();
+// require('dotenv').config();
 import { Button, Card } from 'react-bootstrap';
 import UbdateForm from './UbdateForm';
+
 // server.get('/getFav', getFav);
 class Favorite extends React.Component {
     constructor(props) {
