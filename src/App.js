@@ -3,14 +3,15 @@ import { withAuth0 } from '@auth0/auth0-react';
 import Header from './Header';
 import Footer from './Footer';
 import Profile from './Profile';
-import BsetUni from './BsetUni';
+import Main from './component/Main';
 import Login from './Login';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
-import Favorite from './Favorite';
+import Favourit from './component/Favourit';
+
 
 
 class App extends React.Component {
@@ -27,19 +28,17 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/">
               {/* TODO: if the user is logged in, render the `BestBooks` component, if they are not, render the `Login` component */}
-              {(isAuthenticated ? <BsetUni /> : <Login />)}
+              {(isAuthenticated ? <Main/> : <Login />)}
 
             </Route >
             <Route exact path="/profile">
               {/* TODO: add a route with a path of '/profile' that renders a `Profile` component */}
               <Profile />
             </Route >
-            <Route exact path="/favorite">
-            {isAuthenticated && (<Favorite />)}
-
-
+            <Route exact path="/favorit">
+          { isAuthenticated && 
+              <Favourit/>}
             </Route >
-
           </Switch>
           <Footer />
         </Router>
