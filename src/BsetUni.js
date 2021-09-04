@@ -3,6 +3,7 @@ import { withAuth0 } from "@auth0/auth0-react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, Button,Card } from 'react-bootstrap';
 import axios from 'axios';
+require('dotenv').config();
 // import ShowUni from './ShowUni';
 
 
